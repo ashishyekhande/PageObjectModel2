@@ -63,5 +63,95 @@
 
 	</dependencies>
 
+	<profiles>
+				
+		<profile>
+			<id>cucumber_greenkart</id>
+			<build>
+				<pluginManagement>
+					<plugins>
+						<plugin>
+							<groupId>org.apache.maven.plugins</groupId>
+							<artifactId>maven-surefire-plugin</artifactId>
+							<version>3.5.4</version>
+							<configuration>
+								<suiteXmlFiles>
+									<suiteXmlFile>cucumber_greenkart.xml</suiteXmlFile>
+								</suiteXmlFiles>
+							</configuration>
+						</plugin>
+					</plugins>
+				</pluginManagement>
+			</build>
+		</profile>
+		
+		
+		<profile>
+			<id>cucumber_login</id>
+			<build>
+				<pluginManagement>
+					<plugins>
+						<plugin>
+							<groupId>org.apache.maven.plugins</groupId>
+							<artifactId>maven-surefire-plugin</artifactId>
+							<version>3.5.4</version>
+							<configuration>
+								<suiteXmlFiles>
+									<suiteXmlFile>cucumber_login.xml</suiteXmlFile>
+								</suiteXmlFiles>
+							</configuration>
+						</plugin>
+					</plugins>
+				</pluginManagement>
+			</build>
+		</profile>
+		
+		
+		
+		<profile>
+			<id>Parallel_cucumber</id>
+			<build>
+				<pluginManagement>
+					<plugins>
+						<plugin>
+							<groupId>org.apache.maven.plugins</groupId>
+							<artifactId>maven-surefire-plugin</artifactId>
+							<version>3.5.4</version>
+							<configuration>
+								<suiteXmlFiles>
+									<suiteXmlFile>Parallel_cucumber.xml</suiteXmlFile>
+								</suiteXmlFiles>
+							</configuration>
+						</plugin>
+					</plugins>
+				</pluginManagement>
+			</build>
+		</profile>
+		
+		
+		<profile>
+			<id>parallel_testng</id>
+			<build>
+				<pluginManagement>
+					<plugins>
+						<plugin>
+							<groupId>org.apache.maven.plugins</groupId>
+							<artifactId>maven-surefire-plugin</artifactId>
+							<version>3.5.4</version>
+							<configuration>
+								<suiteXmlFiles>
+									<suiteXmlFile>parallel_testng.xml</suiteXmlFile>
+								</suiteXmlFiles>
+							</configuration>
+						</plugin>
+					</plugins>
+				</pluginManagement>
+			</build>
+		</profile>
+			
+
+
+	</profiles>
+
 
 </project>
