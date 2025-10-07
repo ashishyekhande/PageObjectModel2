@@ -49,8 +49,9 @@ public class baseclass {
 	
 	public void initialize() throws Exception
 	{
-		//local 
-		 
+			 
+		System.out.println(" i am on lopgin branch");
+		
 		System.out.println("created feature 1");
 		
 		FileInputStream fis = new FileInputStream("./Data/config.properties");
