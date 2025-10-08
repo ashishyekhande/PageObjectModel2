@@ -57,7 +57,20 @@ public class baseclass {
 		FileInputStream fis = new FileInputStream("./Data/config.properties");
 		Properties p = new Properties();
 		p.load(fis);
-		String browser =p.getProperty("browser").trim();
+		
+		//if get input from terminal then use that else use from config file
+		String browser;
+		if(System.getProperty("browser")!=null) 
+		{
+			browser = System.getProperty("browser");  // terminal  --> edge
+		}
+		else 
+		{
+			browser =p.getProperty("browser").trim();
+			
+		}
+			
+		
 		String env =p.getProperty("env").trim();
 		
 		if(env.equalsIgnoreCase("remote"))
