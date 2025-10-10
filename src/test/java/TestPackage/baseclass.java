@@ -82,12 +82,21 @@ public class baseclass {
 			w= new RemoteWebDriver(url, cap);
 		}
 		else if(env.equalsIgnoreCase("local")) //local
-		{	
-			if(browser.equalsIgnoreCase("chrome"))
+		{
+			
+			if(browser.contains("chrome"))     // chrome , chromeheadless  
 			{
+				
 				ChromeOptions op = new ChromeOptions();
 				op.addArguments("--incognito");
+				
+				if(browser.contains("headless")) //chromeheadless
+				{
+					op.addArguments("headless");
+				}
+				
 				w = new ChromeDriver(op);
+					
 			}
 			if(browser.equals("edge"))
 			{
